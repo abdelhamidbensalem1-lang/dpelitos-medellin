@@ -8,12 +8,13 @@ export default function Home() {
         padding: "70px 20px",
         textAlign: "center"
       }}>
-        <h1 style={{ fontSize: "42px", color: "#166534", lineHeight: "1.2" }}>
-  D’Pelitos Medellín
-  <br />
-  <span style={{ fontSize: "20px", fontWeight: "normal" }}>
+        <h1 style={{ color: "#166534", lineHeight: "1.2" }}>
+  <div style={{ fontSize: "42px", fontWeight: "700" }}>
+    D’Pelitos Medellín
+  </div>
+  <div style={{ fontSize: "26px", fontWeight: "700" }}>
     Peluquería Canina y Felina / Veterinaria
-  </span>
+  </div>
 </h1>
         <p style={{ fontSize: "18px", margin: "20px 0" }}>
           Servicio a domicilio en el Área Metropolitana
