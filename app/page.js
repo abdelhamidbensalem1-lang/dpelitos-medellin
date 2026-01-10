@@ -16,6 +16,31 @@ export default function Home() {
       transform: translateY(0);
     }
   }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(22,163,74,0.6);
+    }
+    70% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 12px rgba(22,163,74,0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeCard {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `}</style>
 
       {/* HERO */}
@@ -37,15 +62,21 @@ export default function Home() {
         </p>
 
         <a href="https://wa.me/573019534080" target="_blank"
-          style={{
-            backgroundColor: "#16a34a",
-            color: "white",
-            padding: "16px 32px",
-            borderRadius: "30px",
-            fontSize: "18px",
-            fontWeight: "bold",
-            textDecoration: "none"
-          }}>
+  style={{
+    backgroundColor: "#16a34a",
+    color: "white",
+    padding: "16px 32px",
+    borderRadius: "30px",
+    fontSize: "18px",
+    fontWeight: "bold",
+    textDecoration: "none",
+    animation: "pulse 2.5s infinite",
+    display: "inline-block",
+    transition: "transform 0.3s"
+  }}
+  onMouseOver={e => e.currentTarget.style.transform = "scale(1.08)"}
+  onMouseOut={e => e.currentTarget.style.transform = "scale(1)"}
+>
           Agendar por WhatsApp
         </a>
       </section>
@@ -68,13 +99,16 @@ export default function Home() {
             { img: "/flyer-bano.jpeg", title: "Baño y Corte" },
             { img: "/flyer-chequeos.jpeg", title: "Chequeos Médicos" },
             { img: "/flyer-medicamentos.jpeg", title: "Medicamentos" },
-          ].map((item) => (
-            <div key={item.title} style={{
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 6px 15px rgba(0,0,0,0.1)",
-              backgroundColor: "white"
-            }}>
+          ].map((item, index) => (
+           <div key={item.title} style={{
+  borderRadius: "16px",
+  overflow: "hidden",
+  boxShadow: "0 6px 15px rgba(0,0,0,0.1)",
+  backgroundColor: "white",
+  opacity: 0,
+  animation: `fadeCard 0.6s ease-out forwards`,
+  animationDelay: `${index * 0.15}s`
+}}>
               <img src={item.img} alt={item.title} style={{ width: "100%" }} />
               <div style={{ padding: "15px", textAlign: "center" }}>
                 <strong>{item.title}</strong>
