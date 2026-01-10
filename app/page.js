@@ -16,8 +16,6 @@ export default function Home() {
   </span>
 </h1>
         <p style={{ fontSize: "18px", margin: "20px 0" }}>
-          Grooming • Pet Shop • Veterinaria  
-          <br />
           Servicio a domicilio en el Área Metropolitana
         </p>
 
