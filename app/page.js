@@ -1,69 +1,111 @@
-"use client";
-
 export default function Home() {
   return (
-    <main style={{ padding: 24, background: "#f0fdf4", color: "#14532d" }}>
-      <h1 style={{ fontSize: 40, fontWeight: "bold" }}>
-        D’Pelitos Medellín 🐾
-      </h1>
-
-      <p style={{ fontSize: 18, marginTop: 10 }}>
-        Veterinaria · Grooming · Spa Canino y Felino en Medellín
-      </p>
-
-      <section style={{ marginTop: 40 }}>
-        <h2>Servicios Veterinarios</h2>
-        <ul>
-          <li>Consulta general</li>
-          <li>Vacunación</li>
-          <li>Esterilización</li>
-          <li>Urgencias</li>
-          <li>Cirugía y hospitalización</li>
-          <li>Desparasitación</li>
-        </ul>
-      </section>
-
-      <section style={{ marginTop: 30 }}>
-        <h2>Grooming & Spa</h2>
-        <ul>
-          <li>Baños completos y medicados</li>
-          <li>Baños antipulgas</li>
-          <li>Corte higiénico y comercial</li>
-          <li>Spa Canino</li>
-          <li>Spa Felino</li>
-        </ul>
-      </section>
-
-      <section style={{ marginTop: 30 }}>
-        <h2>Promociones</h2>
-        <p>
-          <strong>Paquetes desde $50.000 COP</strong>
+    <main style={{ fontFamily: "Arial, sans-serif", color: "#1f2937" }}>
+      
+      {/* HERO */}
+      <section style={{
+        background: "linear-gradient(135deg, #e9fbe9, #ffffff)",
+        padding: "60px 20px",
+        textAlign: "center"
+      }}>
+        <h1 style={{ fontSize: "42px", color: "#166534", marginBottom: "10px" }}>
+          D’Pelitos Medellín
+        </h1>
+        <p style={{ fontSize: "18px", marginBottom: "30px" }}>
+          Grooming • Pet Shop • Veterinaria  
+          <br />
+          Servicio a domicilio en el Área Metropolitana
         </p>
-      </section>
 
-      <section style={{ marginTop: 40 }}>
-        <h2>Agenda tu cita</h2>
         <a
-          href="https://wa.me/573009994019?text=Hola%20quiero%20agendar%20una%20cita%20en%20D’Pelitos%20Medellín"
+          href="https://wa.me/573009994019"
           target="_blank"
           style={{
-            display: "inline-block",
-            marginTop: 12,
-            padding: "14px 22px",
-            background: "#16a34a",
+            backgroundColor: "#16a34a",
             color: "white",
-            borderRadius: 10,
+            padding: "15px 30px",
+            borderRadius: "30px",
             textDecoration: "none",
-            fontWeight: "bold",
+            fontSize: "18px",
+            fontWeight: "bold"
           }}
         >
           Agendar por WhatsApp
         </a>
       </section>
 
-      <footer style={{ marginTop: 60, fontSize: 14 }}>
-        © {new Date().getFullYear()} D’Pelitos Medellín
-      </footer>
+      {/* SERVICIOS */}
+      <section style={{ padding: "60px 20px", maxWidth: "1100px", margin: "auto" }}>
+        <h2 style={{ textAlign: "center", fontSize: "32px", color: "#166534" }}>
+          Nuestros Servicios
+        </h2>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "20px",
+          marginTop: "40px"
+        }}>
+          {[
+            "Veterinaria",
+            "Esterilización",
+            "Vacunación",
+            "Cirugía",
+            "Grooming y Baño",
+            "Corte e Higiene",
+            "Chequeos médicos",
+            "Medicamentos",
+            "Spa canino y felino",
+            "Servicio a domicilio"
+          ].map((servicio) => (
+            <div key={servicio} style={{
+              border: "1px solid #e5e7eb",
+              borderRadius: "16px",
+              padding: "20px",
+              textAlign: "center",
+              background: "#ffffff",
+              boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
+            }}>
+              <p style={{ fontSize: "18px", fontWeight: "600" }}>{servicio}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTACTO */}
+      <section style={{
+        backgroundColor: "#166534",
+        color: "white",
+        padding: "60px 20px",
+        textAlign: "center"
+      }}>
+        <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
+          Contáctanos
+        </h2>
+        <p style={{ marginBottom: "10px" }}>
+          📞 300 999 4019 • 300 681 1688
+        </p>
+        <p style={{ marginBottom: "30px" }}>
+          Atención en Medellín y Área Metropolitana
+        </p>
+
+        <a
+          href="https://wa.me/573009994019"
+          target="_blank"
+          style={{
+            backgroundColor: "white",
+            color: "#166534",
+            padding: "15px 30px",
+            borderRadius: "30px",
+            textDecoration: "none",
+            fontSize: "18px",
+            fontWeight: "bold"
+          }}
+        >
+          Agendar por WhatsApp
+        </a>
+      </section>
+
     </main>
   );
 }
