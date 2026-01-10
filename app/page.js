@@ -17,7 +17,7 @@ export default function Home() {
           Servicio a domicilio en el Área Metropolitana
         </p>
 
-        <a href="https://wa.me/573009994019" target="_blank"
+        <a href="https://wa.me/573019534080" target="_blank"
           style={{
             backgroundColor: "#16a34a",
             color: "white",
@@ -99,11 +99,11 @@ export default function Home() {
         </h2>
 
         <p style={{ marginBottom: "30px" }}>
-          📞 300 999 4019 • 300 681 1688 <br />
+          📞 3019534080 <br />
           Medellín y Área Metropolitana
         </p>
 
-        <a href="https://wa.me/573009994019" target="_blank"
+        <a href="https://wa.me/573019534080" target="_blank"
           style={{
             backgroundColor: "white",
             color: "#166534",
