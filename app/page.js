@@ -1,40 +1,37 @@
 export default function Home() {
   return (
     <main style={{ fontFamily: "Arial, sans-serif", color: "#1f2937" }}>
-      
+
       {/* HERO */}
       <section style={{
         background: "linear-gradient(135deg, #e9fbe9, #ffffff)",
-        padding: "60px 20px",
+        padding: "70px 20px",
         textAlign: "center"
       }}>
-        <h1 style={{ fontSize: "42px", color: "#166534", marginBottom: "10px" }}>
+        <h1 style={{ fontSize: "42px", color: "#166534" }}>
           D’Pelitos Medellín
         </h1>
-        <p style={{ fontSize: "18px", marginBottom: "30px" }}>
+        <p style={{ fontSize: "18px", margin: "20px 0" }}>
           Grooming • Pet Shop • Veterinaria  
           <br />
           Servicio a domicilio en el Área Metropolitana
         </p>
 
-        <a
-          href="https://wa.me/573009994019"
-          target="_blank"
+        <a href="https://wa.me/573009994019" target="_blank"
           style={{
             backgroundColor: "#16a34a",
             color: "white",
-            padding: "15px 30px",
+            padding: "16px 32px",
             borderRadius: "30px",
-            textDecoration: "none",
             fontSize: "18px",
-            fontWeight: "bold"
-          }}
-        >
+            fontWeight: "bold",
+            textDecoration: "none"
+          }}>
           Agendar por WhatsApp
         </a>
       </section>
 
-      {/* SERVICIOS */}
+      {/* GALERÍA */}
       <section style={{ padding: "60px 20px", maxWidth: "1100px", margin: "auto" }}>
         <h2 style={{ textAlign: "center", fontSize: "32px", color: "#166534" }}>
           Nuestros Servicios
@@ -47,61 +44,75 @@ export default function Home() {
           marginTop: "40px"
         }}>
           {[
-            "Veterinaria",
-            "Esterilización",
-            "Vacunación",
-            "Cirugía",
-            "Grooming y Baño",
-            "Corte e Higiene",
-            "Chequeos médicos",
-            "Medicamentos",
-            "Spa canino y felino",
-            "Servicio a domicilio"
-          ].map((servicio) => (
-            <div key={servicio} style={{
-              border: "1px solid #e5e7eb",
+            { img: "/flyer-servicios.jpg", title: "Servicios Veterinarios" },
+            { img: "/flyer-grooming.jpg", title: "Grooming Profesional" },
+            { img: "/flyer-bano.jpg", title: "Baño y Corte" },
+            { img: "/flyer-chequeos.jpg", title: "Chequeos Médicos" },
+            { img: "/flyer-medicamentos.jpg", title: "Medicamentos" },
+          ].map((item) => (
+            <div key={item.title} style={{
               borderRadius: "16px",
-              padding: "20px",
-              textAlign: "center",
-              background: "#ffffff",
-              boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
+              overflow: "hidden",
+              boxShadow: "0 6px 15px rgba(0,0,0,0.1)",
+              backgroundColor: "white"
             }}>
-              <p style={{ fontSize: "18px", fontWeight: "600" }}>{servicio}</p>
+              <img src={item.img} alt={item.title} style={{ width: "100%" }} />
+              <div style={{ padding: "15px", textAlign: "center" }}>
+                <strong>{item.title}</strong>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CONTACTO */}
+      {/* SERVICIOS LISTA */}
+      <section style={{ backgroundColor: "#f0fdf4", padding: "60px 20px" }}>
+        <h2 style={{ textAlign: "center", fontSize: "32px", color: "#166534" }}>
+          ¿Qué ofrecemos?
+        </h2>
+
+        <ul style={{
+          maxWidth: "800px",
+          margin: "30px auto",
+          fontSize: "18px",
+          lineHeight: "2"
+        }}>
+          <li>✔ Esterilización</li>
+          <li>✔ Vacunación</li>
+          <li>✔ Cirugía</li>
+          <li>✔ Hospitalización</li>
+          <li>✔ Grooming y Spa Canino / Felino</li>
+          <li>✔ Medicamentos y accesorios</li>
+          <li>✔ Atención a domicilio</li>
+        </ul>
+      </section>
+
+      {/* CTA FINAL */}
       <section style={{
         backgroundColor: "#166534",
         color: "white",
-        padding: "60px 20px",
+        padding: "70px 20px",
         textAlign: "center"
       }}>
-        <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
-          Contáctanos
+        <h2 style={{ fontSize: "34px", marginBottom: "20px" }}>
+          Agenda hoy mismo
         </h2>
-        <p style={{ marginBottom: "10px" }}>
-          📞 300 999 4019 • 300 681 1688
-        </p>
+
         <p style={{ marginBottom: "30px" }}>
-          Atención en Medellín y Área Metropolitana
+          📞 300 999 4019 • 300 681 1688 <br />
+          Medellín y Área Metropolitana
         </p>
 
-        <a
-          href="https://wa.me/573009994019"
-          target="_blank"
+        <a href="https://wa.me/573009994019" target="_blank"
           style={{
             backgroundColor: "white",
             color: "#166534",
-            padding: "15px 30px",
+            padding: "16px 34px",
             borderRadius: "30px",
-            textDecoration: "none",
             fontSize: "18px",
-            fontWeight: "bold"
-          }}
-        >
+            fontWeight: "bold",
+            textDecoration: "none"
+          }}>
           Agendar por WhatsApp
         </a>
       </section>
