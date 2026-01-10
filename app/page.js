@@ -1,6 +1,22 @@
 export default function Home() {
+  const fadeUp = {
+  animation: "fadeUp 0.8s ease-out forwards",
+};
   return (
     <main style={{ fontFamily: "Arial, sans-serif", color: "#1f2937" }}>
+
+<style>{`
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`}</style>
 
       {/* HERO */}
       <section style={{
@@ -8,7 +24,7 @@ export default function Home() {
         padding: "70px 20px",
         textAlign: "center"
       }}>
-        <h1 style={{ color: "#166534", lineHeight: "1.2" }}>
+       <h1 style={{ color: "#166534", lineHeight: "1.2", ...fadeUp }}>
   <div style={{ fontSize: "42px", fontWeight: "700" }}>
     D’Pelitos Medellín
   </div>
