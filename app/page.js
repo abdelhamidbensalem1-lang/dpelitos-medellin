@@ -44,11 +44,11 @@ export default function Home() {
           marginTop: "40px"
         }}>
           {[
-            { img: "/flyer-servicios.jpg", title: "Servicios Veterinarios" },
-            { img: "/flyer-grooming.jpg", title: "Grooming Profesional" },
-            { img: "/flyer-bano.jpg", title: "Baño y Corte" },
-            { img: "/flyer-chequeos.jpg", title: "Chequeos Médicos" },
-            { img: "/flyer-medicamentos.jpg", title: "Medicamentos" },
+            { img: "/flyer-servicios.jpeg", title: "Servicios Veterinarios" },
+            { img: "/flyer-grooming.jpeg", title: "Grooming Profesional" },
+            { img: "/flyer-bano.jpeg", title: "Baño y Corte" },
+            { img: "/flyer-chequeos.jpeg", title: "Chequeos Médicos" },
+            { img: "/flyer-medicamentos.jpeg", title: "Medicamentos" },
           ].map((item) => (
             <div key={item.title} style={{
               borderRadius: "16px",
