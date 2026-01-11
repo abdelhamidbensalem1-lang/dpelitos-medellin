@@ -125,19 +125,16 @@ export default function Home() {
         </h2>
 
         <ul style={{
-          maxWidth: "800px",
-          margin: "30px auto",
-          fontSize: "18px",
-          lineHeight: "2"
-        }}>
-          <li>✔ Esterilización</li>
-          <li>✔ Vacunación</li>
-          <li>✔ Cirugía</li>
-          <li>✔ Hospitalización</li>
-          <li>✔ Grooming y Spa Canino / Felino</li>
-          <li>✔ Medicamentos y accesorios</li>
-          <li>✔ Atención a domicilio</li>
-        </ul>
+  maxWidth: "800px",
+  margin: "30px auto",
+  fontSize: "18px",
+  lineHeight: "2"
+}}>
+  <li>✔ Grooming y Spa Canino / Felino</li>
+  <li>✔ Peluquería Canina y Felina</li>
+  <li>✔ Baño y corte higiénico</li>
+  <li>✔ Atención a domicilio</li>
+</ul>
       </section>
 
       {/* CTA FINAL */}
