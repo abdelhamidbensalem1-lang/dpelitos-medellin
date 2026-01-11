@@ -120,22 +120,22 @@ export default function Home() {
 
       {/* SERVICIOS LISTA */}
       <section style={{ backgroundColor: "#f0fdf4", padding: "60px 20px" }}>
-        <h2 style={{ textAlign: "center", fontSize: "32px", color: "#166534" }}>
-          ¿Qué ofrecemos?
-        </h2>
+  <h2 style={{ textAlign: "center", fontSize: "32px", color: "#166534" }}>
+    Nuestros Servicios
+  </h2>
 
-        <ul style={{
-  maxWidth: "800px",
-  margin: "30px auto",
-  fontSize: "18px",
-  lineHeight: "2"
-}}>
-  <li>✔ Grooming y Spa Canino / Felino</li>
-  <li>✔ Peluquería Canina y Felina</li>
-  <li>✔ Baño y corte higiénico</li>
-  <li>✔ Atención a domicilio</li>
-</ul>
-      </section>
+  <ul style={{
+    maxWidth: "800px",
+    margin: "30px auto",
+    fontSize: "18px",
+    lineHeight: "2"
+  }}>
+    <li>✔ Grooming y Spa Canino / Felino</li>
+    <li>✔ Peluquería Canina y Felina</li>
+    <li>✔ Baño y corte higiénico</li>
+    <li>✔ Atención a domicilio</li>
+  </ul>
+</section>
 
       {/* CTA FINAL */}
       <section style={{
