@@ -1,3 +1,5 @@
+"use client";
+
 export default function Home() {
   const fadeUp = {
   animation: "fadeUp 0.8s ease-out forwards",
